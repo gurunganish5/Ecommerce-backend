@@ -90,6 +90,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>-XX:+EnableDynamicAgentLoading -Djdk.instrument.traceUsage=false</argLine>
+					<argLine>--illegal-access=warn</argLine>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
